@@ -1,0 +1,38 @@
+:root {
+    --color-dark: #361999;
+    --color-light: #78fff1;
+    --color-fiolet: #df80f2;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+h1 {
+    color: red;
+}
+body {
+    background: var(--color-fiolet);
+}
+.box {
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+    margin: 50px;
+    border: 10px solid #000000;
+    background-color: hsla(0, 100%, 50% );
+}
+.box2 {
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    margin: 40px;
+    border: 10px solid #000000;
+    background-color: hsla(0, 100%, 50% );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

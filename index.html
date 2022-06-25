@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Main Site</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        .tekst{
+            color: blueviolet;
+            text-align: center;
+
+        }
+        h1{
+            color: brown;
+            text-align: center;
+            text-transform: uppercase;
+            
+        }
+    </style>
+    <h1 style="padding-top:100px;">Co chcialbys zrobic?</h1>
+    <div id="Index_account" class="tekst">
+        <h2 style="padding-top: 50px;">Sprawdz dostepnego uzytkownika</h2>
+        <button id="myButtonHome" class="box" >Okno podgladu uzytkownikow</button>
+
+        <script type="text/javascript">
+        document.getElementById("myButtonHome").onclick = function () {
+            location.href="login.html";
+            };
+    
+        </script>
+    </div>
+    <div id="Index_no_account" class="tekst">
+        <h2>Zaloz konto nowego uzytkownikowi</h2>
+        <button id="myButtonRegister" class="box" >Register</button>
+
+        <script type="text/javascript">
+        document.getElementById("myButtonRegister").onclick = function () {
+        location.href = "driverID.html";
+        };
+        </script>
+    </div>
+</body>
+</html>
