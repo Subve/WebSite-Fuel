@@ -8,26 +8,86 @@
         <meta name="viewport" content="width-device-width, initial-sale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie-edge">
         <title>Strona Glowna</title>
-        <link rel="stylesheet" href="styles.css"/>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
 	<script src="jquery-2.2.0.min.js"></script>
+<style>
+body{
+    background: rgb(36,0,9);
+background: linear-gradient(90deg, rgba(36,0,9,0.6218097447795823) 0%, rgba(19,121,9,0.8747099767981439) 52%, rgba(0,161,255,1) 100%);}
+#numer_kierowcy{
+    text-align: center;
+    padding-top: 300px;
+    font-size: 70px;
+}
+.input2
+{
+    width: 200px;
+    
+}
+.button-18 {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  
+}
 
+.button-18:hover,
+.button-18:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+</style>
     </head>
     
 
     <body> 
-    <!--   -->
+    
     
     <form method="get" action="afterid.html">
        
-        <div>
-           <label>Numer_kierowcy</label><br>
-        <input type="number" name='"webdata".DriverID' id='"webdata".DriverID' placeholder="Podaj swoj numer kierowcy" min="0" max="200" required><br> 
+        <div id="numer_kierowcy">
+           <label>Numer kierowcy</label><br>
+        <div><input class="input2" type="number" name='"webdata".DriverID' id='"webdata".DriverID' placeholder="Podaj swoj numer kierowcy" min="1" max="20" required><br> 
         </div>
-        
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>   <br>
+         
+        <button class="button-18" role="button" type="submit">Submit</button>
+        <button class="button-18" role="button" type="reset">Reset</button>   <br>
 
     </form>
     

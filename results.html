@@ -9,29 +9,133 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-sale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie-edge">
-        <title>Results</title>
+        <title>Wynik logowania</title>
         <script src="jquery-2.2.0.min.js"></script>
-        <link rel="stylesheet" href="styles.css"/>
-	
+        
+	<style>
+        body{
+    background: rgb(36,0,9);
+background: linear-gradient(90deg, rgba(36,0,9,0.6218097447795823) 0%, rgba(19,121,9,0.8747099767981439) 52%, rgba(0,161,255,1) 100%);
+text-align: center;
+padding-top: 30px;
+font-size: 30px;
+}
+.button-18 {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  
+}
+
+.button-18:hover,
+.button-18:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+#results
+{
+    padding-top: 40px;
+}
+#results2
+{
+    padding-top: 60px;
+}
+#results3
+{
+    padding-top: 80px;
+}
+#przyciski
+{
+    text-align: center;
+    padding-top: 100px;
+}
+    </style>
 
     </head> 
     <body>
 
         <div id="results"></div>
-        <a class="box2" href="index.html">Back to form</a>
+        <a class="box2" href="index.html" hidden>Back to form</a>
         
+    
     <script>
+        
+        
         const resultsList = document.getElementById('results')
         new URLSearchParams(window.location.search).forEach((value, name)=> 
-        {
-            results.append(`${name}: ${value}`)
+        {   let text = `${name}`;
+            let result = text.slice(10, 20);
+            let text2 = `${value}`;
+            let text3=value.length-1;
+            let result2 = text2.slice(1, text3);
+            results.append(`${result.toUpperCase()}: ${result2}`)
+            results.append(document.createElement('br'))
             results.append(document.createElement('br'))
         })
-    </script>
-    :="webdata".unregistered:<br>
-    <div id="results2"></div>
-    <a class="box2" href="login.html">Back to login</a>
+    </script><br>
+    <a2 hidden>:="webdata".unregistered:<br></a2>
+    <div id="przyciski">
+        <div id="results"></div>
+            <button class="button-18" role="button" id="buttonhome" >Wroc do panelu glownego</button>      
+        <div id="results2"></div>
+            <button class="button-18" role="button" id="buttonlogin">Sprawdz aktualnych uzytkownikow</button>
+        <div id="results3"></div>
+            <button class="button-18" role="button" id="buttonregister">Zarejestruj kolejnego uzytkownika</button>
+    </div>
 
+
+<script type="text/javascript">
+            document.getElementById("buttonhome").onclick = function () {
+                location.href="index.html";
+                };
+        
+            </script>
+<script type="text/javascript">
+            document.getElementById("buttonlogin").onclick = function () {
+                location.href="login.html";
+                };
+        
+            </script>
+<script type="text/javascript">
+    document.getElementById("buttonregister").onclick = function () {
+        location.href="driverID.html";
+        };
+
+    </script>
     
     </body>
     </html>

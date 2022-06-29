@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+<!-- AWP_In_Variable Name='"webdata".myInt2' -->
+<!-- AWP_In_Variable Name='"webdata".web_imie' -->
+<!-- AWP_In_Variable Name='"webdata".web_paliwouzyte' -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +10,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"/>
     <title>Document</title>
+    <style>
+body{
+    background: rgb(36,0,9);
+background: linear-gradient(90deg, rgba(36,0,9,0.6218097447795823) 0%, rgba(19,121,9,0.8747099767981439) 52%, rgba(0,161,255,1) 100%);}
+h1{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 40px;
+}
+
+
+.header_user{
+    text-align: center;
+}
+.wybieranie{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 30px;
+}
+.input{
+    size: 299px;
+}
+table.blueTable {
+  border: 1px solid #12A41B;
+  background-color: #3536EE;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  
+}
+table.blueTable td, table.blueTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+  
+}
+table.blueTable tbody td {
+  font-size: 25px;
+  
+}
+table.blueTable tr:nth-child(even) {
+  background: #D0E4F5;
+  
+}
+table.blueTable thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+  
+}
+table.blueTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+table.blueTable tfoot td {
+  font-size: 14px;
+}
+#tabela{
+    padding-top: 50px;
+}
+    </style>
 </head>
 <body>
-    <h1>Your logged in</h1>
+    <h1 class="header_user" style="padding-top: 30px;">Jakiego uzytkownika chcesz sprawdzic?</h1>
+	<form method="get">
+	 <div class="wybieranie">
+            <label for="myint2">Index Uzytkownika</label><br>
+        <input class="input" type='number' name='"webdata".myInt2' id='"webdata".myInt2' placeholder="ID" required><br>
+        </div>
+	
+	</form>
+	<div id="tabela">
+        <table class="blueTable" >
+            <thead>
+            <tr>
+            <th>Imie</th>
+            <th>Zuzyte Paliwo</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>:="webdata".web_imie:</td>
+            <td>:="webdata".web_paliwouzyte:</td>
+            </tr>
+            </tbody>
+            </table>
+	</div>
 </body>
 </html>

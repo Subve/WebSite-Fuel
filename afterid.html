@@ -11,42 +11,147 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"/>
-    <title>Po id</title>
+    
+    <title>Rejestracja</title>
+
+<style>
+body{
+    background: rgb(36,0,9);
+background: linear-gradient(90deg, rgba(36,0,9,0.6218097447795823) 0%, rgba(19,121,9,0.8747099767981439) 52%, rgba(0,161,255,1) 100%);
+text-align: center;
+
+}
+h1{
+    padding-top: 10px;
+}
+#name{
+    padding: 10px 0;
+  text-align: center;
+  font-size: 30px;
+}
+#nazwisko{
+    padding: 10px 0;
+  text-align: center;
+  font-size: 30px;
+}
+#haslo{
+    padding: 10px 0;
+  text-align: center;
+  font-size: 30px;
+}
+#logowanie{
+    padding: 100px 0;
+  text-align: center;
+}
+.button-18 {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  
+}
+
+.button-18:hover,
+.button-18:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+
+
+</style>
+
+
 </head>
 <body> 
-    <script>
-        let vimie;
-        vimie="hallo "+ "world";
-        console.log(vimie);
-
-        </script>
+    <h1 style="text-align: centre;">Rejestracja na id :="webdata".DriverID:</h1>
     <form method="get" action="results.html">
-
-        <div>
-            <label for="imie">Name</label><br>
-        <input type='text' name='"webdata".imie' id='"webdata".imie' placeholder="twoje imie" required><br>
+<div id="logowanie">
+        <div id="name">
+            <label for="imie">Imie</label><br>
+            <input id="tmp_imie" placeholder="Imie kierowcy" type="text" onchange="getValueInput()" required/>
+        <input type='text' name='"webdata".imie' id='"webdata".imie' placeholder="Imie kierowcy21" hidden><br>
+        
         </div>
-        <div>
+        <div id="nazwisko">
             <label for="nazwisko">Nazwisko</label><br>
-        <input type='text' name='"webdata".nazwisko' id='"webdata".nazwisko' placeholder="twoje nazwisko" required><br>
+        <input id="tmp_nazwisko" placeholder="Nazwisko kierowcy" type="text" onchange="getValueInputN()" required/>
+        <input type='text' name='"webdata".nazwisko' id='"webdata".nazwisko' placeholder="Nazwisko kierowcy21" hidden><br>
         </div>
-        <div>
+        <div id="haslo">
             <label for="haslo">Haslo</label><br>
-        <input type='password' name='"webdata".haslo' id='"webdata".haslo' placeholder="twoje haslo" required><br>
+        <input id="tmp_haslo" placeholder="Haslo kierowcy" type="password" onchange="getValueInputH()" required/>
+        <input type='text' name='"webdata".haslo' id='"webdata".haslo' placeholder="Haslo kierowcy21" hidden><br>
         </div>
-        
-    
         <div>
-        <button type="submit">Submit</button>
-        
+        <button class="button-18" role="button" type="submit">Submit</button>
+        <button class="button-18" role="button" type="reset">Reset</button>   
         </div>
-        <button type="reset">Reset</button>   <br>
+    
+
 
     </form>
-    :="webdata".DriverID:
-    
-    </body>
-</body>
 
+
+</body>
+<script>
+    
+    
+    const getValueInput = () =>{
+     let nazwaInput = document.getElementById("tmp_imie").value;
+     let laczenie = '\'' + nazwaInput + '\'';
+     document.getElementById('"webdata".imie').value = laczenie;
+   }
+   </script>
+   <script>
+    
+    
+    const getValueInputN = () =>{
+     let nazwaInput = document.getElementById("tmp_nazwisko").value;
+     let laczenie = '\'' + nazwaInput + '\'';
+     document.getElementById('"webdata".nazwisko').value = laczenie;
+   }
+   </script>
+   <script>
+    
+    
+    const getValueInputH = () =>{
+     let nazwaInput = document.getElementById("tmp_haslo").value;
+     let laczenie = '\'' + nazwaInput + '\'';
+     document.getElementById('"webdata".haslo').value = laczenie;
+   }
+   </script>
 </html>
